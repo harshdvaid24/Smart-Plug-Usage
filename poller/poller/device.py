@@ -55,6 +55,12 @@ class PlugClient(Protocol):
     async def get_daily_stats(self) -> dict[str, float]: ...
     # {month_start_ist 'YYYY-MM-01': wh}
     async def get_monthly_stats(self) -> dict[str, float]: ...
+    
+    # Actions
+    async def turn_on(self) -> None: ...
+    async def turn_off(self) -> None: ...
+    async def set_led(self, state: bool) -> None: ...
+    async def set_auto_off(self, enabled: bool, minutes: int) -> None: ...
 
 
 # ──────────────────────────────────────────────────────────────────────────────
@@ -150,6 +156,22 @@ class KasaP110Client:
     async def get_monthly_stats(self) -> dict[str, float]:
         return {}
 
+    async def turn_on(self) -> None:
+        await self._dev.turn_on()
+
+    async def turn_off(self) -> None:
+        await self._dev.turn_off()
+
+    async def set_led(self, state: bool) -> None:
+        if "led" in self._dev.features:
+            await self._dev.features["led"].set_value(state)
+
+    async def set_auto_off(self, enabled: bool, minutes: int) -> None:
+        if "auto_off_enabled" in self._dev.features:
+            await self._dev.features["auto_off_enabled"].set_value(enabled)
+        if "auto_off_minutes" in self._dev.features:
+            await self._dev.features["auto_off_minutes"].set_value(minutes)
+
 
 # ──────────────────────────────────────────────────────────────────────────────
 # Mock implementation — deterministic, for tests & offline demo (no network)
@@ -196,3 +218,15 @@ class MockPlugClient:
 
     async def get_monthly_stats(self) -> dict[str, float]:
         return {}
+
+    async def turn_on(self) -> None:
+        log.info("mock plug: turn ON")
+
+    async def turn_off(self) -> None:
+        log.info("mock plug: turn OFF")
+
+    async def set_led(self, state: bool) -> None:
+        log.info("mock plug: set LED = %s", state)
+
+    async def set_auto_off(self, enabled: bool, minutes: int) -> None:
+        log.info("mock plug: set auto_off = %s (delay %d min)", enabled, minutes)

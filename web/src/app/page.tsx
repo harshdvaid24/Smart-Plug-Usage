@@ -3,6 +3,7 @@ import { KpiCard } from "@/components/kpi-card";
 import { LiveGauge } from "@/components/live-gauge";
 import { PeriodSelector } from "@/components/period-selector";
 import { UsageChart } from "@/components/usage-chart";
+import ACControls from "@/components/ACControls";
 import { Card, CardContent } from "@/components/ui/card";
 import {
   formatKwh,
@@ -63,6 +64,8 @@ export default async function Dashboard({
   return (
     <>
       <PeriodSelector />
+      
+      <ACControls />
 
       <div className="grid gap-4 md:grid-cols-3">
         <div className="md:col-span-1">

@@ -168,8 +168,16 @@ async def run(conn, client: PlugClient, device_id: str, cfg: Config) -> None:
         status="online",
     )
     log.info("poller running for %s (fw=%s)", device_id, info.fw_ver)
-    await asyncio.gather(
-        _power_loop(conn, client, device_id, cfg),
-        _energy_loop(conn, client, device_id, cfg),
-        _daily_loop(conn, client, device_id, cfg),
-    )
+    
+    # Start internal API server
+    from .api import start_api_server
+    api_runner = await start_api_server(client, port=8000)
+    
+    try:
+        await asyncio.gather(
+            _power_loop(conn, client, device_id, cfg),
+            _energy_loop(conn, client, device_id, cfg),
+            _daily_loop(conn, client, device_id, cfg),
+        )
+    finally:
+        await api_runner.cleanup()

@@ -1,6 +1,6 @@
 # Data acquisition (PRIMARY poller — most reliable P110 energy + KLAP support)
 python-kasa>=0.7,<0.10
-
+aiohttp>=3.8.0
 # Scheduling / async are stdlib (asyncio). SQLite is stdlib (sqlite3).
 # Dev/test:
 pytest>=8.0
