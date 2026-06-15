@@ -66,7 +66,11 @@ export interface BillsRepository {
 function deviceRepo(): DeviceRepository {
   const db = getDb();
   return {
-    getPrimary: () => db.select().from(device).orderBy(device.id).limit(1).get(),
+    getPrimary() {
+      const list = db.select().from(device).all();
+      const real = list.find((d) => d.deviceId !== "p110-demo" && d.deviceId !== "p110-mock");
+      return real || list[0];
+    },
     get: (deviceId) =>
       db.select().from(device).where(eq(device.deviceId, deviceId)).get(),
     list: () => db.select().from(device).all(),

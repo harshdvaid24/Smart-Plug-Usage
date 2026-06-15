@@ -25,6 +25,7 @@ export default async function Dashboard({
 }) {
   const sp = await searchParams;
   const period = (VALID.includes(sp.period as PeriodType) ? sp.period : "cycle") as PeriodType;
+  const deviceId = sp.deviceId ?? undefined;
 
   let usage, projection, live, error: string | null = null;
   try {
@@ -33,9 +34,10 @@ export default async function Dashboard({
       start: sp.start,
       end: sp.end,
       granularity: sp.granularity as "hour" | "day" | "month" | undefined,
+      deviceId,
     });
-    projection = getProjection({});
-    live = getLive();
+    projection = getProjection({ deviceId });
+    live = getLive(deviceId);
   } catch (e) {
     error = e instanceof Error ? e.message : "Failed to load";
   }
@@ -64,7 +66,7 @@ export default async function Dashboard({
 
       <div className="grid gap-4 md:grid-cols-3">
         <div className="md:col-span-1">
-          <LiveGauge initial={live} />
+          <LiveGauge key={deviceId ?? "default"} initial={live} deviceId={deviceId} />
         </div>
 
         <div className="grid grid-cols-2 gap-4 md:col-span-2">

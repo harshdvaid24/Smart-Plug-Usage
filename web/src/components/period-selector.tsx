@@ -22,11 +22,14 @@ export function PeriodSelector() {
   const [end, setEnd] = useState(params.get("end") ?? "");
 
   function go(period: string, s?: string, e?: string) {
-    const q = new URLSearchParams();
+    const q = new URLSearchParams(params.toString());
     q.set("period", period);
     if (period === "custom" && s && e) {
       q.set("start", s);
       q.set("end", e);
+    } else {
+      q.delete("start");
+      q.delete("end");
     }
     router.push(`${pathname}?${q.toString()}`);
   }

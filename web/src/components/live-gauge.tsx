@@ -31,14 +31,15 @@ function describeArc(value: number) {
   return { x, y };
 }
 
-export function LiveGauge({ initial }: { initial: Live }) {
+export function LiveGauge({ initial, deviceId }: { initial: Live; deviceId?: string }) {
   const [live, setLive] = useState<Live>(initial);
 
   useEffect(() => {
     let active = true;
     const tick = async () => {
       try {
-        const res = await fetch("/api/v1/live", { cache: "no-store" });
+        const url = deviceId ? `/api/v1/live?deviceId=${encodeURIComponent(deviceId)}` : "/api/v1/live";
+        const res = await fetch(url, { cache: "no-store" });
         const json = await res.json();
         if (active && json.data) setLive(json.data);
       } catch {
@@ -50,11 +51,11 @@ export function LiveGauge({ initial }: { initial: Live }) {
       active = false;
       clearInterval(id);
     };
-  }, []);
+  }, [deviceId]);
 
-  const needle = describeArc(live.current_power_w);
+  const offline = live.status === "offline" || live.status === "unknown";
+  const needle = describeArc(offline ? 0 : live.current_power_w);
   const onMin = live.on_time_s != null ? Math.round(live.on_time_s / 60) : null;
-  const offline = live.status === "offline";
 
   return (
     <Card className="overflow-hidden">
@@ -103,10 +104,10 @@ export function LiveGauge({ initial }: { initial: Live }) {
 
         <div className="text-center">
           <div className="font-mono text-3xl font-bold tabular-nums text-primary">
-            {formatWatts(live.current_power_w)}
+            {offline ? "—" : formatWatts(live.current_power_w)}
           </div>
           <div className="mt-1 text-xs text-muted-foreground">
-            Today {formatKwh(live.today_kwh)}
+            Today {offline ? "—" : formatKwh(live.today_kwh)}
             {onMin != null && <> · on {onMin} min</>}
           </div>
         </div>

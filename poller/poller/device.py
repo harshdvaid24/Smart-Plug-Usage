@@ -72,11 +72,18 @@ class KasaP110Client:
         self._dev = None  # kasa.Device
 
     async def connect(self) -> None:
-        from kasa import Credentials, Device  # lazy import
+        from kasa import Credentials, Device, DeviceConfig, DeviceConnectionParameters, DeviceFamily, DeviceEncryptionType  # lazy import
 
         self._dev = await Device.connect(
-            host=self._host,
-            credentials=Credentials(self._email, self._password),
+            config=DeviceConfig(
+                host=self._host,
+                credentials=Credentials(self._email, self._password),
+                uses_http=True,
+                connection_type=DeviceConnectionParameters(
+                    device_family=DeviceFamily.SmartTapoPlug,
+                    encryption_type=DeviceEncryptionType.Klap,
+                )
+            )
         )
         await self._dev.update()
         fw = getattr(self._dev, "hw_info", {}).get("sw_ver") or getattr(
