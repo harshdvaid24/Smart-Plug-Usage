@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --radius: 0.75rem;
+  /* Dark is the default theme (§9.2). */
+  --background: 222 30% 7%;
+  --foreground: 210 30% 96%;
+  --card: 222 26% 11%;
+  --card-foreground: 210 30% 96%;
+  --muted: 222 18% 18%;
+  --muted-foreground: 214 14% 64%;
+  --accent: 199 89% 48%;
+  --accent-foreground: 222 47% 11%;
+  --primary: 199 89% 55%;
+  --primary-foreground: 222 47% 11%;
+  --border: 222 18% 20%;
+  --input: 222 18% 22%;
+  --ring: 199 89% 55%;
+}
+
+.light {
+  --background: 210 40% 98%;
+  --foreground: 222 47% 11%;
+  --card: 0 0% 100%;
+  --card-foreground: 222 47% 11%;
+  --muted: 210 30% 92%;
+  --muted-foreground: 215 16% 40%;
+  --accent: 199 89% 48%;
+  --accent-foreground: 0 0% 100%;
+  --primary: 199 89% 45%;
+  --primary-foreground: 0 0% 100%;
+  --border: 214 20% 84%;
+  --input: 214 20% 84%;
+  --ring: 199 89% 45%;
+}
+
+* {
+  border-color: hsl(var(--border));
+}
+
+body {
+  background: hsl(var(--background));
+  color: hsl(var(--foreground));
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Vintage analog energy-meter motif (live gauge nod, §9.2). */
+.meter-face {
+  background: radial-gradient(circle at 50% 30%, #15314f 0%, #0c1726 70%);
+  box-shadow: inset 0 2px 12px rgba(0, 0, 0, 0.6), 0 0 0 6px #0a1320,
+    0 0 0 8px var(--brass, #c8a04a);
+}
