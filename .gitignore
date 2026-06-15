@@ -1,0 +1,38 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+poller/.venv/
+poller/**/__pycache__/
+*.egg-info/
+
+# Env / secrets (NEVER commit)
+.env
+.env.local
+.env.*.local
+*.env
+
+# Build outputs
+web/.next/
+web/out/
+web/dist/
+web/next-env.d.ts
+*.tsbuildinfo
+
+# Data (SQLite lives in a volume / data dir)
+data/
+*.db
+*.db-shm
+*.db-wal
+*.sqlite
+*.sqlite3
+
+# Test / coverage
+coverage/
+.vitest/
+
+# OS / editor
+.DS_Store
+*.log
+.idea/
+.vscode/
