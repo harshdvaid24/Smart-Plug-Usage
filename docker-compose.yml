@@ -1,0 +1,35 @@
+# Tapo P110 Energy & Cost Dashboard — runs on an ALWAYS-ON LAN device
+# (Raspberry Pi / mini-PC / NAS). The poller CANNOT run remotely: the P110 local
+# API only answers on the plug's network (§2.1).
+#
+#   cp .env.example .env   # fill in TAPO_* creds + device IP
+#   docker compose up -d --build
+#   open http://<lan-host>:3000   (or via Tailscale)
+
+services:
+  poller:
+    build: ./poller
+    env_file: .env
+    environment:
+      - DATABASE_URL=/data/energy.db
+    volumes:
+      - sqlite-data:/data
+    restart: unless-stopped
+    # host networking lets the poller reach the plug's static LAN IP via KLAP.
+    network_mode: host
+
+  web:
+    build: ./web
+    env_file: .env
+    environment:
+      - DATABASE_URL=/data/energy.db
+    volumes:
+      - sqlite-data:/data
+    ports:
+      - "3000:3000"
+    restart: unless-stopped
+    depends_on:
+      - poller
+
+volumes:
+  sqlite-data:
