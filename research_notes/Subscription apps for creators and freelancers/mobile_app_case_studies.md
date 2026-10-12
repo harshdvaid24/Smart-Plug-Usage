@@ -1,6 +1,6 @@
 # Proof-of-revenue case studies: mobile-first (iOS/Android) subscription apps by solo devs and small teams for creators/vloggers and individual consumers (2023–2026), incl. Indian makers
 
-> Status: IN PROGRESS (skeleton written before searching; sections are filled as searches complete).
+> Status: COMPLETE (35 WebSearch calls used; WebFetch not used per instructions). Figures come from search-result summaries, not full-page reads; treat single-source numbers accordingly.
 > Source-type labels used throughout: [CO] = company-published; [FSR] = founder self-report (X, podcast, interview); [3P] = third-party estimate (Appfigures, Sensor Tower, etc. as reported in news); [NEWS] = journalist reporting citing unnamed or mixed sources.
 
 ## 0. Case-study compilation (objective): which 12–20 mobile subscription apps have proof of revenue, and what are their attributes?
@@ -129,7 +129,12 @@ Creator-facing apps cluster at **~$5–30 a month**: Linktree $5 (now $8) to $24
 ## 2. Individual consumer apps from small teams with large revenue: which tactics repeat?
 
 ### Takeaway
-(pending)
+The small-team consumer winners (Cal AI, Umax, QUITTR) repeat one formula:
+- a single AI or transformation hook in a high-emotion personal area (diet, looks, porn addiction);
+- **paid creator/influencer short-form video** at low CPMs (Cal AI: ~$0.50–3, using "what I eat in a day" formats);
+- monetization pushed early in onboarding.
+
+Their revenue is large but founder-reported and decays: Umax fell from ~$700K to ~$400K a month. Quieter cases grew another way. **Structured** grew through Apple's "App of the Day" and word of mouth; **Finch** reports being profitable with ~24 staff. Opal and RISE are VC-backed annual-plan apps (RISE: $69.99 a year) with unverified revenue. Lensa and Remini show the AI-photo spike-and-crash pattern.
 
 ### Cited Findings
 #### Cal AI (photo-based calorie tracker; iOS-first, later Android)
@@ -190,15 +195,34 @@ Creator-facing apps cluster at **~$5–30 a month**: Linktree $5 (now $8) to $24
 - TikTok playbook breakdown: challenges, skits, day-in-the-life formats; sub-one-minute videos; raw, "real" tone; 40M+ views across markets [3P analysis, partly paywalled] — [Playkit](https://playkit.substack.com/p/calorie-tracker-app); agency summary: 15M+ downloads and $30M+ annual revenue in under two years [3P] — [House of Marketers](https://houseofmarketers.com/?p=23512)
 
 ### Inferences
-(pending)
+- **How often each tactic appears in this set:**
+  - Influencer/UGC short video: Cal AI, QUITTR and Umax, plus viral sharing for Lensa, Remini and Prequel.
+  - App Store editorial featuring: Structured.
+  - Strategic exit: Cal AI to MyFitnessPal.
+  - ASO and Product Hunt appear in no case, and Reddit appears in none.
+  - Hard paywalls are commonly linked to these apps, but this research did not verify which paywall each uses. The RevenueCat benchmarks in Section 5 support the approach in general.
+- **The playbook can be reused.** Blake Anderson co-founded or built RIZZ, Umax and Cal AI. The same team, applying the same creator-marketing method to new emotional niches, produced three hits. Execution of distribution, not the AI model, is the moat.
+- **The incumbent-acquisition path is real.** MyFitnessPal bought Cal AI and connected it to its 20M-food database, fixing the data-accuracy weakness of a model-only calorie app. A thin AI app wins distribution; an incumbent supplies the data.
+- **Decay is the norm** for trend-led apps (Umax down ~43% from peak; Lensa down ~98%). Habit apps with emotional loops (Finch) and design-led utilities (Structured) look steadier, but their revenue is unverified.
+- **Small teams are not always solo.** Cal AI reported 7–30 people at ~$30–40M/yr and Finch ~24. "Solo" cases are mostly early-stage (QUITTR had two founders).
 
 ### Gaps
-(pending)
+- **Not verified for any consumer case:** pricing, trial length and paywall type for Cal AI, QUITTR, Umax, Opal, Finch and Structured.
+- **Conflicting figures:**
+  - Cal AI headcount: 7, 17 or ~30.
+  - Cal AI revenue: $30M, $35M or $40M+.
+  - QUITTR start year: 2023 (Starter Story) vs. an Aug 2024 launch (LADN).
+- **No verified revenue for Finch, Opal or Structured.** Only modeled estimates or unsourced claims exist.
+- **No unit economics (CAC per payer, payback) were disclosed** by any of these apps. Only Cal AI's CPM range is public.
+- **Not researched (budget):** Umax's acquisition channel in detail, Blake Anderson's RIZZ, Rizz-style AI dating apps, and other 2025–26 UGC hits (e.g., Bible or AI-companion apps).
 
 ## 3. Indian makers of mobile apps (India or global), incl. verifiedmrr.in
 
 ### Takeaway
-(pending)
+In 35 searches, **no Indian solo or small-team mobile subscription app with publicly verified MRR surfaced**. verifiedmrr.in exists: a Razorpay-verified MRR leaderboard built by solo developer Abinav R. Its rankings could not be read here. The macro signal is clear, though:
+- India-based developers earn **~80% of their App Store income from users outside India** (IIM Ahmedabad study published by Apple).
+- RevenueCat medians put India & Southeast Asia at **~0.7% download-to-paid** (vs. ~2.8% in North America) with **~$14 one-year LTV per payer** (vs. ~$32).
+- The proven Indian app success in this set is a global-facing game studio (99Games), not a subscription app.
 
 ### Cited Findings
 #### verifiedmrr.in (leaderboard)
@@ -217,15 +241,32 @@ Creator-facing apps cluster at **~$5–30 a month**: Linktree $5 (now $8) to $24
 - Solo-developer reference points found were not confirmed as Indian: a listing for a solo-built dating app (React Native/Expo + Supabase, later adding subscriptions; revenue not disclosed) — [Microns](https://www.microns.io/startup-listings/indian-dating-mobile-app); a Jul 2026 post claiming ~$1,100/month from AI-built apps (mainly ads/IAP) — [Medium](https://medium.com/@anulagarwal12/my-ai-generated-apps-earn-1-000-mo-here-is-how-you-can-too-9b6cac3007d3)
 
 ### Inferences
-(pending)
+- **Revenue per install, India vs. the US** (arithmetic on cited medians; medians do not multiply exactly, so this is directional only):
+  - India/SEA: ~0.7% × ~$14 ≈ **$0.10 per install per year**.
+  - North America: ~2.8% × ~$32 ≈ **$0.90**, roughly 9x more.
+  - An India-only consumer subscription therefore needs very cheap acquisition (organic, ASO, communities) or much higher intent.
+- **Indian makers who succeed seem to sell globally.** The 80%-from-abroad figure, 99Games, and the 2016 Phonato quote ("failed to gain traction from India but strong response from US, UK, Middle East") all point the same way. For a Gujarat developer that means USD pricing, English creator marketing aimed at the US, UK and Gulf, and a PPP-priced India tier.
+- **verifiedmrr.in is a credibility tool.** It gives founders a badge and a shareable card, and lists the startup for acquisition. An Indian founder could use it alongside TrustMRR for building in public. The report writer may want to check the leaderboard manually for app-category entries.
+- **India's volume is no substitute for spend.** In 2023 there were ~26B downloads but only ~$415M of app-store spend. That supports ad-supported, freemium or sachet models for India-first products rather than US-style $9.99/month plans. Sibling notes cover India price points in detail.
 
 ### Gaps
-(pending)
+- **The verifiedmrr.in leaderboard could not be read.** Search summaries return only listings, and direct fetching is blocked. Unknown: which entries are mobile apps, and their MRR.
+- **No Indian indie iOS/Android developer with revealed MRR was found** on Indie Hackers, YourStory or Inc42 for 2023–2026. Indie Hackers leads were title-only and unconfirmed as Indian.
+- **No revenue or download data for Gujarat/Surat app studios.**
+- **India ₹ pricing (₹99–₹499) for the case-study apps** was not retrieved. See the sibling notes `economics_payments_pricing.md` §7 and `india_creator_economy.md` §7.
+- **Not researched (budget):** India-built consumer subscription apps that are VC-backed but small-team (e.g., regional audio/OTT or devotional apps).
 
 ## 4. Failure and commoditization cases
 
 ### Takeaway
-(pending)
+The failure pattern is consistent:
+- **Viral AI-photo novelties spike and collapse.** Lensa went from >$2M in a single day (Dec 2022) to under $600K a month by May 2024.
+- **AI apps churn faster.** Annual-plan churn is ~30% higher, and annual retention is 21.1% vs 30.7% for non-AI apps (RevenueCat 2026).
+- **AI-headshot businesses are valued like commodities**, with listings as low as ~0.5x revenue.
+- **Third-party ChatGPT apps lost revenue** once paid-ad growth faded.
+- **Free platform-owned editors moved in.** Meta's Edits (7.1M downloads in its first week, Apr 2025) and ByteDance's free-first Hypic pushed the category leader, Captions, to freemium.
+- **Even hits decay.** Umax fell ~43% from its peak.
+- **Sensitive-category apps carry trust risk.** QUITTR reportedly exposed users' data.
 
 ### Cited Findings
 #### Lensa: the canonical viral-spike-then-collapse
@@ -252,15 +293,40 @@ Creator-facing apps cluster at **~$5–30 a month**: Linktree $5 (now $8) to $24
 - An Indie Hackers story titled "Making $9k/mo with a mobile app until platform risk took its toll" (founder identity/nationality unconfirmed; title-level evidence only) [FSR] — [Indie Hackers](https://www.indiehackers.com/Bibintb)
 
 ### Inferences
-(pending)
+- **Three causes of commoditization show up in this evidence:**
+  1. **Model parity.** Remini's Nano Banana boost used a Google model that every rival can call, and Google's own Gemini app can too. A model-only feature is a temporary edge.
+  2. **Platform owners shipping free equivalents.** Edits, CapCut and Hypic stay free or unmonetized, backed by giants with distribution.
+  3. **Novelty without a recurring job.** Avatars and headshots are needed once, not every month, so subscriptions churn.
+- **Defenses seen in the surviving cases:**
+  - Proprietary data or integration (MyFitnessPal's database behind Cal AI).
+  - Owning a money workflow (Stan's storefront, ManyChat's DM-to-sale).
+  - Habit and emotional loops (Finch, if its profitability claims hold).
+  - Design-led utility with Apple featuring (Structured).
+- **Caption and editing apps are the clearest "don't build" signal for a solo mobile developer.** Generic captions, avatars, headshots and "chat with GPT" wrappers all fit the commoditized pattern.
+- **Low exit multiples** (~0.5x revenue for some AI-headshot listings) show that buyers price in decay. A solo founder should value durable, retained MRR over launch spikes.
 
 ### Gaps
-(pending)
+- **No time-series revenue data** for AI headshot apps (HeadshotPro, Aragon, BetterPic and others) was found; only marketplace listings.
+- **No revenue change** for dedicated caption apps after Edits launched (Apr 2025), apart from Captions' freemium switch, which comes from sibling notes. Captions' trailing ~$28.4M suggests it survived.
+- **Wrapper-app churn:** no data beyond RevenueCat's AI cohort and Appfigures' Oct 2023 piece. That piece is title-level plus summary; the body was not read.
+- **QUITTR's data exposure:** details not established (headline-level only).
+- **Lensa's 2025–2026 status** not checked.
 
 ## 5. Unit economics: UGC/influencer CAC, trial conversion, weekly vs annual pricing (US), India pricing
 
 ### Takeaway
-(pending)
+RevenueCat benchmarks favour **hard paywalls**:
+- ~10.7% vs ~2.1% Day-35 download-to-paid (2026 report);
+- ~$3.09 vs ~$0.38 revenue per install by Day 60;
+- similar one-year retention (27% vs 28%), but more refunds (5.8% vs 3.4%).
+
+**Longer trials** convert better: 17–32 days at 42.5% vs 25.5% for trials under 4 days.
+
+US price anchors are **~$9.99 for monthly plans (the most common price) and ~$29.99 for annual plans (the median)**. Weekly plans around $5–6 appear in photo and novelty apps.
+
+**Performance UGC** costs ~$0.50–3 CPM in under-sponsored niches (Cal AI) or ~$1 CPM in vendor playbooks, against ~$8–18 for TikTok ads.
+
+**India/SEA converts ~4x worse (0.7% vs 2.8%) and is worth ~2.3x less per payer ($14 vs $32 over a year).**
 
 ### Cited Findings
 #### Paywall type and conversion (RevenueCat State of Subscription Apps; ~115K mostly consumer mobile apps)
@@ -292,7 +358,24 @@ Creator-facing apps cluster at **~$5–30 a month**: Linktree $5 (now $8) to $24
 - India app market: ~25.96B downloads but only ~$415M app-store consumer spend in 2023 (data.ai via Inc42) [3P] — [Inc42](https://inc42.com/?p=435804)
 
 ### Inferences
-(pending)
+- **Break-even arithmetic for paid UGC.** This is illustrative only: it uses cited medians, ignores store fees, and treats Day-60 or one-year revenue as the full payback.
+  - At a **$1 CPM**:
+    - a hard-paywall app (~$3.09 per install by Day 60) breaks even at **≥1 install per ~3,100 views**;
+    - a freemium app (~$0.38) needs **≥1 per ~380 views**;
+    - an India-targeted app (~$0.10 per install per year, from 0.7% × $14) needs **≥1 per ~100 views** (1% view-to-install), which is implausible at scale.
+  - At Cal AI's **$0.50–3 CPM**, the hard-paywall break-even ranges from ~1 install per 6,200 views to ~1 per 1,000.
+- **QUITTR's reported ~$40K from one ~10M-view video** works out to ~$4 of same-day revenue per 1,000 views. That is several times the $1–3 CPM creators are paid, which explains why influencer funnels made money for these apps, if attribution holds.
+- **Weekly vs annual pricing:** Prequel's ~$5.99 a week (~$311 a year if kept) next to $14.99 a year shows weekly plans serve impulse and novelty use, with a cheap annual plan as the anchor. Habit apps lean on annual plans (RISE $69.99). AI apps lean annual but churn faster, so a weekly or monthly entry plan plus an annual upsell may suit AI-heavy apps. That last point is an inference.
+- **Higher prices convert better** (2.7% vs 1.5% D35 for high- vs low-priced apps). Underpricing does not buy conversion in Western markets.
+- **For India**, the ~9x gap in revenue per install suggests:
+  - acquisition through free channels (Instagram/Reels organic, creator communities, ASO in regional languages);
+  - PPP pricing on the store;
+  - possibly web checkout over UPI for annual plans.
+  Payment rails and ₹ price points are covered in sibling notes.
 
 ### Gaps
-(pending)
+- **No verified CAC per *paying* user** through UGC or influencers was found for any app; only CPMs and one revenue-per-video anecdote (QUITTR).
+- **No median US weekly-plan price** was found in RevenueCat summaries. Weekly price evidence is one listing (Prequel).
+- **The original RevenueCat 2026 PDF was not read.** All benchmark figures come from secondary write-ups, which label one metric inconsistently ("trial-to-paid" vs download-to-paid).
+- **India ₹ price points (₹99–₹499)** and India trial-conversion data were not found in these searches. See sibling notes. The AppsOps conversion-by-price claims for India are unsourced.
+- **Store fees, refunds and taxes** were not netted out of any arithmetic above.
