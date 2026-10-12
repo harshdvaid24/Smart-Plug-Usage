@@ -39,7 +39,7 @@ Stolen content, editing costs and scheduling reliability come up repeatedly. How
 - *Where they fall short*
   - Meta has published no skip-rate benchmarks; the third-party heuristics (healthy under ~30–40%, a hook problem over ~50%) are not Meta standards — [marketing4ecommerce](https://marketing4ecommerce.net/en/retention-and-skip-rate-reels/)
   - Creators can't tell a platform-wide distribution shift from an account-specific penalty, and Meta's explanation is disputed — [Search Engine Land](https://searchengineland.com/instagram-why-content-isnt-reaching-followers-439028)
-  - Meta's own "why" assistant is US-first, with a daily prompt cap — [PetaPixel, Oct 1 2026](https://petapixel.com/2026/10/01/instagram-launches-ai-assistant-that-analyzes-your-reels-and-suggests-new-ideas/)
+  - Meta's own "why" assistant is US-first, with a daily prompt cap — [PetaPixel, Oct 1 2026](https://petapixel.com/2026/10/01/instagram-launches-ai-assistant-that-analyzes-your-reels-and-suggests-new-ideas/); [Unite.AI](https://unite.ai/instagrams-edits-app-gains-ai-creative-assistant-for-us-users); [The Next Web](https://thenextweb.com/news/instagram-edits-assistant-ai-creators-reels)
 
 **#2 Pressure to post consistently, running out of ideas, and burnout. Very frequent.**
 - *Evidence*
@@ -47,9 +47,9 @@ Stolen content, editing costs and scheduling reliability come up repeatedly. How
   - Billion Dollar Boy / Censuswide (July 2025, 1,000 US and UK creators):
     - 52% have experienced career burnout, and 37% have considered quitting.
     - Leading causes are creative fatigue (40%), demanding workloads (31%) and constant screen time (27%).
-    - 58% say burnout affects their wellbeing.
+    - 59% say burnout hurts their careers, and 58% say it affects their overall wellbeing.
     - Sources: [Billion Dollar Boy](https://www.billiondollarboy.com/news/over-half-of-creators-face-burnout); [CosmeticsDesign-Europe, Jul 17 2025](https://www.cosmeticsdesign-europe.com/Article/2025/07/17/52-of-content-creators-say-they-have-experienced-burnout)
-  - Per sibling notes, ~69% of North American creators are affected by burnout and ~30% "often" face delayed payments (Nov 2025) — [PodcastVideos](https://www.podcastvideos.com/creator-mental-health-study-burnout-financial-strain/)
+  - Per sibling notes, a Nov 2025 North American creator mental-health study found ~69% affected by burnout or financial strain, with ~30% "often" facing delayed payments — [PodcastVideos](https://www.podcastvideos.com/creator-mental-health-study-burnout-financial-strain/)
   - Meta's own Trial Reels pitch centres on output: it reportedly said 40% of creators who used Trial Reels began posting more often (secondary coverage) — [Small Business Trends](https://smallbiztrends.com/?p=1500357)
 - *Tools attempting it*
   - Edits offers up to 10 custom clip ideas a week based on past Reels — [Social Samosa](https://www.socialsamosa.com/news-2/edits-app-internal-linking-new-effects-storyboard-tools-11005674)
@@ -225,7 +225,7 @@ Meta has also started charging for premium creator tooling through **Meta One** 
 - **Edits (free).** It is still free, with no paid tier found as of a July 2026 tracker. Mosseri has said some advanced AI features may go behind a subscription because of compute costs — [Planoly](https://planoly.com/blog/instagrams-edits-app-review); [SocialBee](https://socialbee.com/blog/instagram-updates/)
   - First 2026 update: links inside clips to other Reels or accounts, though "not to external websites"; 25 new effects; up to 10 weekly clip ideas based on past Reels — [Social Samosa](https://www.socialsamosa.com/news-2/edits-app-internal-linking-new-effects-storyboard-tools-11005674); per sibling notes, [Social Media Today](https://www.socialmediatoday.com/news/edits-gets-ig-links-weekly-ideas-and-new-video-effects-features/809644/)
   - Feb 2026: timeline settings and copying fonts and clips between projects. June 2026 (reported): audience insights, a Compare Reels option, exports up to 15 minutes, and a desktop version "in development" — [SocialBee](https://socialbee.com/blog/instagram-updates/); [Social Champ](https://www.socialchamp.com/?p=290125)
-- **Edits Assistant (announced Sept 15 to Oct 1, 2026).**
+- **Edits Assistant (listed as upcoming in an Instagram post on Sept 15, 2026; launch coverage Oct 1, 2026).**
   - It reads follows, views, retention, likes and shares, and answers plain-language questions: why one video beat another, what resonated, and what to try next.
   - It is rolling out to all Edits users in the US and is free with a daily prompt limit. Instagram said power users "will soon" get more usage with a Meta One subscription.
   - Its real-world accuracy has not been independently checked.
@@ -243,7 +243,7 @@ Meta has also started charging for premium creator tooling through **Meta One** 
   - Still unsolved: getting a winning trial's reach to carry over to followers (see section 1, #1) — [InstantDM](https://instantdm.com/blog/how-instagram-trial-reels-work)
 - **Native scheduling.** Creator and business accounts can schedule Reels, photos and carousels up to 75 days ahead, with a commonly cited cap of 25 per day; personal accounts can't. Sources disagree on whether desktop works — [Android Central](https://androidcentral.com/apps-software/instagram-creators-in-app-scheduling-achievements); [SocialPilot](https://www.socialpilot.co/blog/schedule-instagram-reels); [RouteNote](https://routenote.com/blog/schedule-instagram-posts/)
 - **Insights.**
-  - "Views" became the unified primary metric across formats in 2025 — [Sotrender](https://www.sotrender.com/blog/?p=58842)
+  - Meta introduced `views` across media and user insights (Graph API v22.0, effective April 21, 2025), replacing impressions and plays. Creator guides describe Views as Instagram's main metric across formats — [Meta: v22.0 changelog](https://developers.facebook.com/docs/graph-api/changelog/version22.0); [Smash Balloon](https://smashballoon.com/how-the-instagram-algorithm-works/)
   - Aug 2025: a Reels Retention chart and Skip Rate (share of viewers who leave within 3 seconds) replaced View Rate — [Social Samosa](https://www.socialsamosa.com/news-2/instagram-retention-chart-skip-rate-new-performance-metrics-reels-9730992); [Website Builder Expert](https://www.websitebuilderexpert.com/news/instagram-reel-retention-chart/)
   - Skip rate is also reshaping brand–creator conversations — [Impact](https://www.impactonnet.com/impact-stories/instagram-introduces-skip-rate-a-tougher-metric-for-brandcreator-conversations-12177.html)
 - **Creator Marketplace.**
@@ -309,7 +309,8 @@ Other constraints:
   - Meta's page lists hashtag discovery, mentions and business discovery (public data from other business and creator accounts) among its features — [Meta: IG API with Facebook Login](https://developers.facebook.com/documentation/instagram-platform/instagram-api-with-facebook-login)
 - **Instagram API with Instagram Login ("Business Login for Instagram")**
   - It serves accounts with only an Instagram presence; the user logs in with Instagram, no Page is needed, and calls go to graph.instagram.com — [Meta: Instagram Platform overview](https://developers.facebook.com/documentation/instagram-platform/overview); [Phyllo](https://www.getphyllo.com/post/instagram-api-guide)
-  - Meta states it "cannot access ads or tagging". Meta's comparison table marks hashtag search as unavailable, and business discovery isn't in its feature list — [Meta: IG API with Instagram Login](https://developers.facebook.com/docs/instagram-platform/instagram-api-with-instagram-login); [bundle.social](https://bundle.social/blog/instagram-graph-api)
+  - Meta states it "cannot access ads or tagging". Meta's overview comparison table marks hashtag search as unavailable, and business discovery isn't in its feature list. Bundle.social says hashtag search, mentions and business discovery are Facebook Login only — [Meta: IG API with Instagram Login](https://developers.facebook.com/docs/instagram-platform/instagram-api-with-instagram-login); [Meta: Instagram Platform overview](https://developers.facebook.com/docs/instagram-platform/overview); [bundle.social](https://bundle.social/blog/instagram-graph-api)
+  - Supported uses include content publishing ([Meta: Content Publishing (IG Login)](https://developers.secure.facebook.com/docs/instagram-platform/instagram-api-with-instagram-login/content-publishing)) and mentions ([Meta](https://developers.facebook.com/documentation/instagram-platform/instagram-api-with-instagram-login)). One guide says it suits feed widgets and DM automation ([Phyllo](https://www.getphyllo.com/post/instagram-api-guide)).
   - Mentions conflict: Meta's Instagram Login page lists mentions as supported, but getlate.dev says they aren't — [Meta](https://developers.facebook.com/documentation/instagram-platform/instagram-api-with-instagram-login); [getlate.dev](https://getlate.dev/blog/instagram-api)
   - Both paths work for business and creator accounts. One guide notes that tools refusing creator accounts usually do so because of the login path chosen, not the profile type — [CreatorFlow](https://creatorflow.so/blog/do-you-need-business-account-instagram-tools/)
 - Hashtag search (Facebook Login only): at most 30 unique hashtags per account per rolling 7 days. It requires App Review and the "Instagram Public Content Access" feature — [Meta: Hashtag Search](https://developers.facebook.com/documentation/instagram-platform/instagram-api-with-facebook-login/hashtag-search)
@@ -330,7 +331,7 @@ Other constraints:
 - The cap is inconsistent across Meta's own pages. One says 50 API-published posts per rolling 24 hours (carousels count as one), checked via the `content_publishing_limit` endpoint. Another says 100 posts per 24-hour moving period plus 400 containers per rolling 24 hours — [Meta: Content Publishing](https://developers.facebook.com/docs/instagram-platform/content-publishing); [Meta: Content Publishing (IG Login)](https://developers.secure.facebook.com/docs/instagram-platform/instagram-api-with-instagram-login/content-publishing)
   - Ayrshare reports a 25-post figure (per sibling notes) — [Ayrshare](https://www.ayrshare.com/solutions/instagram-graph-api-error-9-the-25-post-daily-limit-how-to-fix-it/)
 - Reels and Stories are supported: the current guide covers a single image, video, story or reel through the same two steps (create a container, then publish). Older Meta text saying Reels and Stories were unsupported is outdated — [Meta: Content Publishing](https://developers.facebook.com/documentation/instagram-platform/content-publishing)
-- A third-party source says containers not published within 24 hours expire (unverified) — [bundle.social](https://bundle.social/blog/instagram-graph-api)
+- Third-party sources (per sibling notes) say containers not published within 24 hours expire with status EXPIRED (unverified against Meta) — [bundle.social](https://bundle.social/blog/instagram-api-rate-limits)
 - Reliability: scheduler outages traced to Meta's API still happen. On Feb 26–27, 2026 Later reported that Reels and Stories publishing was disrupted — [Pingoru Later log](https://pingoru.io/providers/later/incidents/4770462); [Later status](https://status.later.com/incidents/vmlkbcsq7q5c)
 
 **DM automation (Instagram Messaging API)**
